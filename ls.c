@@ -3,12 +3,12 @@
 void ls() {
 	const char *directionPath = directionPath = getenv("PWD");
 	if(directionPath == NULL) {
-		printf("\n ERROR : Could not get the working directory\n");
+		printf("Error: Could not get the working directory!\n");
 		return;
 	}
 	DIR *directionCurrent  = opendir(directionPath);
 	if(directionCurrent == NULL) {
-		printf("\n ERROR : Could not open the working directory\n");
+		printf("Error: Could not open the working directory!\n");
 		return;
 	}
 	size_t count = 0;
